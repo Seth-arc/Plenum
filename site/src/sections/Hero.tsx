@@ -9,22 +9,37 @@ export const Hero: React.FC = () => {
       <div className="hero-grain" aria-hidden="true" />
 
       <div className="container hero-inner">
-        <p className="kicker reveal in">Strategic Simulation Platform</p>
+        <p className="kicker hero-anim" style={{ animationDelay: "0.15s" }}>
+          Strategic Simulation Platform
+        </p>
 
-        <h1 className="hero-title reveal in">
+        <h1 className="hero-title hero-anim" style={{ animationDelay: "0.32s" }}>
           Plenum<span className="hero-dot">.</span>
         </h1>
 
-        <p className="hero-tagline reveal in">
+        <p
+          className="hero-tagline hero-anim"
+          style={{ animationDelay: "0.62s" }}
+        >
           Where the full body convenes — a chamber for policy simulation,
           structured deliberation, and consequential decision under pressure.
         </p>
 
-        <div className="hero-arc reveal in" aria-hidden="true">
+        <div className="hero-arc" aria-hidden="true">
           {ARC.map((w, i) => (
             <React.Fragment key={w}>
-              {i > 0 && <span className="hero-arc-dot" />}
-              <span>{w}</span>
+              {i > 0 && (
+                <span
+                  className="hero-arc-dot hero-anim"
+                  style={{ animationDelay: `${0.9 + i * 0.12}s` }}
+                />
+              )}
+              <span
+                className="hero-anim"
+                style={{ animationDelay: `${0.84 + i * 0.12}s` }}
+              >
+                {w}
+              </span>
             </React.Fragment>
           ))}
         </div>

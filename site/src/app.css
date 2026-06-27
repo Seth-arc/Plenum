@@ -120,6 +120,82 @@
   );
   pointer-events: none;
 }
+/* soft gold glow behind the sphere, pulsing in once on load */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  width: 46vw;
+  max-width: 640px;
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(185, 151, 91, 0.16) 0%,
+    rgba(17, 87, 64, 0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  animation: heroGlow 2.4s var(--ease) 0.2s forwards,
+    heroGlowPulse 9s ease-in-out 2.6s infinite;
+}
+
+/* ---------- Hero entrance ---------- */
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+@keyframes heroGlow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes heroGlowPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+@keyframes dotPop {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-anim {
+    opacity: 0;
+    animation: heroRise 0.95s var(--ease) both;
+  }
+  .hero-dot {
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: dotPop 0.5s var(--ease-spring, cubic-bezier(0.34, 1.4, 0.64, 1))
+      0.72s both;
+  }
+}
 .hero-inner {
   position: relative;
   z-index: 2;
