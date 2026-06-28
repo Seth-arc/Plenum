@@ -640,8 +640,8 @@ describe('scribe surface', () => {
     it('ships a standalone blue scribe html shell with live session state ids and requested sidebar labels', () => {
         const html = readFileSync(BLUE_SCRIBE_HTML_PATH, 'utf8');
 
-        expect(html).toContain('<title>Statecraft Sim | Blue Team Scribe</title>');
-        expect(html).toContain('content="Statecraft Sim Blue Team scribe support deck."');
+        expect(html).toContain('<title>Plenum | Blue Team Scribe</title>');
+        expect(html).toContain('content="Plenum Blue Team scribe support deck."');
         expect(html).toContain('data-scribe-presentation="standard"');
         expect(html).toContain('../../styles/components/badges.css');
         expect(html).toContain('<header class="page-header" id="pageHeader">');
@@ -659,6 +659,22 @@ describe('scribe surface', () => {
         expect(html).not.toContain('scribe-stage-toolbar');
         expect(html).not.toContain('scribe-stage-footer');
         expect(html).not.toContain('scribe-section-trigger-description');
+    });
+
+    it('brands the live scribe header as Plenum when the surface boots', async () => {
+        const { ScribeController } = await loadScribeModule();
+        const fakeDocument = createFakeDocument();
+        const roleLabel = fakeDocument.register(createFakeElement('sessionRoleLabel'));
+        const headerTitle = createFakeElement(null, 'header-title');
+        fakeDocument.querySelector = vi.fn((selector) => (selector === '.header-title' ? headerTitle : null));
+        global.document = fakeDocument;
+
+        const controller = new ScribeController();
+
+        controller.configureShell();
+
+        expect(roleLabel.textContent).toBe('Scribe');
+        expect(headerTitle.textContent).toBe('Plenum | Blue Team Scribe');
     });
 
     it('builds the team-scoped facilitator decks into the same decks/team paths that scribe seats fetch at runtime', () => {

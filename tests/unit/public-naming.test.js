@@ -37,62 +37,77 @@ describe('public naming', () => {
         expect(landingHtml).not.toContain('ESG Economic Statecraft Simulation Platform');
     });
 
-    it('keeps Statecraft Sim as the repo-internal product name', () => {
+    it('keeps Plenum as the platform product name', () => {
         const readme = readText('../../README.md');
         const packageJson = JSON.parse(readText('../../package.json'));
 
-        expect(readme).toContain('# Statecraft Sim');
-        expect(readme).toContain('Public product name: `Statecraft Sim`.');
-        expect(readme).toContain('Legacy `SSG` and `esg` identifiers still appear');
-        expect(packageJson.description).toBe('Statecraft Sim seminar simulation platform');
+        expect(readme).toContain('# Plenum');
+        expect(readme).toContain('A digital operating environment for statecraft simulation.');
+        expect(readme).toContain('`index.html` is now the Plenum runtime entry.');
+        expect(packageJson.description).toBe('Plenum seminar simulation platform');
     });
 
-    it('keeps operator and participant surfaces aligned on Statecraft Sim', () => {
+    it('keeps operator and participant surfaces aligned on Plenum', () => {
         const expectations = [
             {
                 path: '../../master.html',
-                title: 'Statecraft Sim | Game Master Operator Console',
-                description: 'Statecraft Sim Game Master operator console.'
+                title: 'Plenum | Game Master Operator Console',
+                description: 'Plenum Game Master operator console.'
             },
             {
                 path: '../../whitecell.html',
-                title: 'Statecraft Sim | White Cell Operator Interface',
-                description: 'Statecraft Sim White Cell operator interface.'
+                title: 'Plenum | White Cell Operator Interface',
+                description: 'Plenum White Cell operator interface.'
             },
             {
                 path: '../../teams/blue/facilitator.html',
-                title: 'Statecraft Sim | Blue Team Facilitator',
-                description: 'Statecraft Sim Blue Team facilitator interface.'
+                title: 'Plenum | Blue Team Facilitator',
+                description: 'Plenum Blue Team facilitator interface.'
             },
             {
                 path: '../../teams/red/facilitator.html',
-                title: 'Statecraft Sim | Red Team Facilitator',
-                description: 'Statecraft Sim Red Team facilitator interface.'
+                title: 'Plenum | Red Team Facilitator',
+                description: 'Plenum Red Team facilitator interface.'
             },
             {
                 path: '../../teams/green/facilitator.html',
-                title: 'Statecraft Sim | Green Team Facilitator',
-                description: 'Statecraft Sim Green Team facilitator interface.'
+                title: 'Plenum | Green Team Facilitator',
+                description: 'Plenum Green Team facilitator interface.'
             },
             {
                 path: '../../teams/blue/notetaker.html',
-                title: 'Statecraft Sim | Blue Team Notetaker',
-                description: 'Statecraft Sim Blue Team notetaker interface.'
+                title: 'Plenum | Blue Team Notetaker',
+                description: 'Plenum Blue Team notetaker interface.'
+            },
+            {
+                path: '../../teams/blue/scribe.html',
+                title: 'Plenum | Blue Team Scribe',
+                description: 'Plenum Blue Team scribe support deck.'
             },
             {
                 path: '../../teams/red/notetaker.html',
-                title: 'Statecraft Sim | Red Team Notetaker',
-                description: 'Statecraft Sim Red Team notetaker interface.'
+                title: 'Plenum | Red Team Notetaker',
+                description: 'Plenum Red Team notetaker interface.'
+            },
+            {
+                path: '../../teams/red/scribe.html',
+                title: 'Plenum | Red Team Scribe',
+                description: 'Plenum Red Team scribe support deck.'
             },
             {
                 path: '../../teams/green/notetaker.html',
-                title: 'Statecraft Sim | Green Team Notetaker',
-                description: 'Statecraft Sim Green Team notetaker interface.'
+                title: 'Plenum | Green Team Notetaker',
+                description: 'Plenum Green Team notetaker interface.'
+            },
+            {
+                path: '../../teams/green/scribe.html',
+                title: 'Plenum | Green Team Scribe',
+                description: 'Plenum Green Team scribe support deck.'
             }
         ];
 
         // The visible header <h1> was removed from the interfaces; the internal
-        // "Statecraft Sim" brand still lives in each document <title> and meta.
+        // Plenum brand still lives in each document <title> and meta.
         for (const surface of expectations) {
             const html = readText(surface.path);
 

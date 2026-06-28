@@ -459,7 +459,7 @@ export class ScribeController {
         }
 
         if (headerTitle) {
-            headerTitle.textContent = `Statecraft Sim | ${this.teamLabel} Scribe`;
+            headerTitle.textContent = `Plenum | ${this.teamLabel} Scribe`;
         }
     }
 

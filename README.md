@@ -27,3 +27,7 @@ Statecraft games, crisis simulations, interagency exercises, classroom wargames,
 ## Future Development
 
 Decision analytics, AAR dashboards, role-based intelligence feeds, automated inject scheduling, participant performance mapping, scenario libraries.
+
+## Runtime Direction
+
+`index.html` is now the Plenum runtime entry. It resolves an active Scenario Pack through `src/core/runtimePack.js`, renders the landing surface from that pack, and falls back to the built-in Fractured Order pack when no session or scenario library is available.

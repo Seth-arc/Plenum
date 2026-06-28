@@ -1,0 +1,144 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: White Cell
+        - generic "Connected" [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]: Move
+            - generic [ref=e13]: "1"
+          - generic [ref=e14]:
+            - generic [ref=e15]: Phase
+            - generic [ref=e16]: Internal Deliberation
+        - generic [ref=e17]:
+          - generic [ref=e18]: 90:00
+          - generic [ref=e19]: Paused
+      - button "Logout" [ref=e22] [cursor=pointer]
+    - complementary [ref=e23]:
+      - button "Collapse sidebar" [expanded] [ref=e24] [cursor=pointer]:
+        - img [ref=e25]
+      - navigation [ref=e27]:
+        - list [ref=e28]:
+          - listitem [ref=e29]: Navigation
+          - listitem [ref=e30]:
+            - link "Simulation Settings" [ref=e31] [cursor=pointer]:
+              - /url: "#controls"
+              - img [ref=e33]
+              - generic [ref=e35]: Simulation Settings
+          - listitem [ref=e36]
+          - listitem [ref=e37]:
+            - link "Actions" [ref=e38] [cursor=pointer]:
+              - /url: "#actions"
+              - img [ref=e40]
+              - generic [ref=e42]: Actions
+          - listitem [ref=e43]:
+            - link "Proposals" [ref=e44] [cursor=pointer]:
+              - /url: "#proposals"
+              - img [ref=e46]
+              - generic [ref=e48]: Proposals
+          - listitem [ref=e49]:
+            - link "Move Responses" [ref=e50] [cursor=pointer]:
+              - /url: "#responses"
+              - img [ref=e52]
+              - generic [ref=e54]: Move Responses
+          - listitem [ref=e55]
+          - listitem [ref=e56]:
+            - link "Tribe Street Journal" [ref=e57] [cursor=pointer]:
+              - /url: "#tribeStreetJournal"
+              - img [ref=e59]
+              - generic [ref=e61]: Tribe Street Journal
+          - listitem [ref=e62]:
+            - link "Verba AI Population Sentiments" [ref=e63] [cursor=pointer]:
+              - /url: "#verbaAi"
+              - img [ref=e65]
+              - generic [ref=e67]: Verba AI Population Sentiments
+          - listitem [ref=e68]
+          - listitem [ref=e69]:
+            - link "RFI" [ref=e70] [cursor=pointer]:
+              - /url: "#requests"
+              - img [ref=e72]
+              - generic [ref=e74]: RFI
+          - listitem [ref=e75]:
+            - link "Communications" [ref=e76] [cursor=pointer]:
+              - /url: "#communications"
+              - img [ref=e78]
+              - generic [ref=e81]: Communications
+          - listitem [ref=e82]:
+            - link "Session Timeline" [active] [ref=e83] [cursor=pointer]:
+              - /url: "#timeline"
+              - img [ref=e85]
+              - generic [ref=e87]: Session Timeline
+      - region "Getting started tour" [ref=e88]:
+        - button "Getting started 1 / 5" [expanded] [ref=e89] [cursor=pointer]:
+          - generic [ref=e90]: Getting started
+          - generic [ref=e91]: 1 / 5
+          - img [ref=e93]
+        - generic [ref=e95]:
+          - heading "Welcome to the White Cell console" [level=4] [ref=e96]
+          - paragraph [ref=e97]: A quick tour of the controls. Step through with Next, or minimize this anytime.
+          - generic [ref=e104]:
+            - button "Skip" [ref=e105] [cursor=pointer]
+            - button "Back" [disabled] [ref=e106]
+            - button "Next" [ref=e107] [cursor=pointer]
+      - generic [ref=e108]:
+        - generic [ref=e109]: Session
+        - generic [ref=e110]: Smoke Session Alpha
+    - main [ref=e111]:
+      - generic [ref=e113]:
+        - generic [ref=e115]:
+          - heading "Session Timeline" [level=2] [ref=e116]
+          - paragraph [ref=e117]: Chronological view of all events
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - generic [ref=e121]: Team Filter
+              - combobox "Team Filter" [ref=e122] [cursor=pointer]:
+                - option "All Teams" [selected]
+                - option "Blue Team"
+                - option "White Cell"
+            - generic [ref=e123]:
+              - generic [ref=e124]: Role Filter
+              - combobox "Role Filter" [ref=e125] [cursor=pointer]:
+                - option "All Roles" [selected]
+                - option "Facilitators"
+                - option "White Cell"
+            - generic [ref=e126]:
+              - generic [ref=e127]: Move Filter
+              - combobox "Move Filter" [ref=e128] [cursor=pointer]:
+                - option "All Moves" [selected]
+                - option "Move 1"
+            - generic [ref=e129]:
+              - generic [ref=e130]: Activity Type Filter
+              - combobox "Activity Type Filter" [ref=e131] [cursor=pointer]:
+                - option "All Activity Types" [selected]
+                - option "Action Created"
+                - option "Action Submitted"
+                - option "Deliberation Update"
+          - generic [ref=e132]:
+            - generic [ref=e135]:
+              - generic [ref=e136]:
+                - generic [ref=e138]: ACTION_ADJUDICATED
+                - generic [ref=e139]: Jun 24, 2026 12:54 AM
+              - paragraph [ref=e140]: "White Cell deliberation recorded: SUCCESS"
+              - paragraph [ref=e141]: White Cell | White Cell Lead | Move 1 | Phase 1 - Internal Deliberation
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - generic [ref=e147]: ACTION_SUBMITTED
+                - generic [ref=e148]: Jun 24, 2026 12:54 AM
+              - paragraph [ref=e149]: "Action submitted to White Cell: Coordinate export controls to reduce semiconductor exposure across allied partners."
+              - paragraph [ref=e150]: Blue Team | Blue Team Facilitator | Move 1 | Phase 1 - Internal Deliberation
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e156]: ACTION_CREATED
+                - generic [ref=e157]: Jun 24, 2026 12:54 AM
+              - paragraph [ref=e158]: "Draft action created: Coordinate export controls to reduce semiconductor exposure across allied partners."
+              - paragraph [ref=e159]: Blue Team | Blue Team Facilitator | Move 1 | Phase 1 - Internal Deliberation
+  - alert
+```

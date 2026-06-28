@@ -1,7 +1,7 @@
 {
   "name": "esg-simulation-platform",
   "version": "2.0.0",
-  "description": "Statecraft Sim seminar simulation platform",
+  "description": "Plenum seminar simulation platform",
   "type": "module",
   "scripts": {
     "dev": "vite",
