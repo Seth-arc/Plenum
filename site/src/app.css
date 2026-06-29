@@ -707,7 +707,7 @@
   overflow: hidden;
   background: var(--ink-raised);
 }
-.uc-feature img {
+.uc-feature > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -718,6 +718,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.uc-feature-mark {
+  align-self: flex-start;
+  width: auto;
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 24px;
+  opacity: 0.95;
 }
 .uc-feature-body h3 {
   font-family: var(--serif);
@@ -965,7 +973,7 @@
   .uc-feature {
     gap: 0;
   }
-  .uc-feature img {
+  .uc-feature > img {
     min-height: 260px;
   }
   .footer-inner {

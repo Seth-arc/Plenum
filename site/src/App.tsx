@@ -308,15 +308,20 @@ const UseCases: React.FC = () => (
           alt="Fractured Order — an economic statecraft seminar game"
         />
         <div className="uc-feature-body">
+          <img
+            className="uc-feature-mark"
+            src={asset("brand/ssg-crest-gold.png")}
+            alt="Statecraft Simulations Group"
+          />
           <p className="kicker">Fielded scenario</p>
           <h3>Fractured Order</h3>
           <p className="muted">
-            An economic statecraft seminar game — the first scenario pack
-            delivered on Plenum. Three delegations negotiate, coerce, and
-            cooperate under escalating pressure, with every move on the record.
+            A William &amp; Mary Statecraft Simulations Group simulation,
+            delivered through Plenum. Four delegations negotiate, coerce, and
+            cooperate under escalating pressure — with every move on the record.
           </p>
           <div className="uc-feature-meta">
-            <span>3 delegations</span>
+            <span>4 delegations</span>
             <span>Multi-phase</span>
             <span>White-cell adjudicated</span>
           </div>
@@ -393,14 +398,7 @@ const CTA: React.FC = () => (
           Explore the project
           <IconArrow />
         </a>
-        <a className="btn btn-ghost" href="mailto:ssg@wm.edu">
-          Talk to the team
-        </a>
       </div>
-      <p className="cta-fine muted">
-        Questions? Reach the Statecraft Simulations Group at{" "}
-        <a href="mailto:ssg@wm.edu">ssg@wm.edu</a>.
-      </p>
     </div>
   </section>
 );
