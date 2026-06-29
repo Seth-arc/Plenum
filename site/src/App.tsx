@@ -422,7 +422,13 @@ const Footer: React.FC = () => (
         <div>
           <h4>Scenarios</h4>
           <a href="#use-cases">Use cases</a>
-          <a href="#use-cases">Fractured Order</a>
+          <a
+            href="https://github.com/ssgwm25/Fractured-Order"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fractured Order
+          </a>
         </div>
         <div>
           <h4>Project</h4>
@@ -433,7 +439,6 @@ const Footer: React.FC = () => (
           >
             GitHub
           </a>
-          <a href="mailto:ssg@wm.edu">ssg@wm.edu</a>
         </div>
       </div>
     </div>
