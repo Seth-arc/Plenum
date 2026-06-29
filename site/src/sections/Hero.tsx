@@ -22,8 +22,8 @@ export const Hero: React.FC = () => {
           className="hero-tagline hero-anim"
           style={{ animationDelay: "0.62s" }}
         >
-          Where the full body convenes — a chamber for policy simulation,
-          structured deliberation, and consequential decision under pressure.
+          A simulation environment for policy simulation, structured
+          deliberation, and consequential decision-making under pressure.
         </p>
 
         <div className="hero-arc" aria-hidden="true">

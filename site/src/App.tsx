@@ -308,11 +308,6 @@ const UseCases: React.FC = () => (
           alt="Fractured Order — an economic statecraft seminar game"
         />
         <div className="uc-feature-body">
-          <img
-            className="uc-feature-mark"
-            src={asset("brand/ssg-crest-gold.png")}
-            alt="Statecraft Simulations Group"
-          />
           <p className="kicker">Fielded scenario</p>
           <h3>Fractured Order</h3>
           <p className="muted">
