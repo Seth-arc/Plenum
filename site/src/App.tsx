@@ -12,6 +12,7 @@ import {
   IconClock,
   IconLayers,
   IconBroadcast,
+  IconArrow,
 } from "./components/icons";
 
 /* ----------------------------------------------------------------- */
@@ -368,6 +369,43 @@ const Research: React.FC = () => (
 );
 
 /* ----------------------------------------------------------------- */
+/* Closing call-to-action                                             */
+/* ----------------------------------------------------------------- */
+const CTA: React.FC = () => (
+  <section className="section cta" id="get-started">
+    <div className="container cta-inner reveal">
+      <p className="kicker">Open the chamber</p>
+      <h2 className="h-display">
+        Run your next exercise as a system, not a one-off.
+      </h2>
+      <p className="lead">
+        Plenum is built and fielded by the Statecraft Simulations Group at
+        William &amp; Mary. Explore the code, field a scenario, or start a
+        conversation about bringing it to your program.
+      </p>
+      <div className="cta-actions">
+        <a
+          className="btn btn-primary"
+          href="https://github.com/Seth-arc/Plenum"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Explore the project
+          <IconArrow />
+        </a>
+        <a className="btn btn-ghost" href="mailto:ssg@wm.edu">
+          Talk to the team
+        </a>
+      </div>
+      <p className="cta-fine muted">
+        Questions? Reach the Statecraft Simulations Group at{" "}
+        <a href="mailto:ssg@wm.edu">ssg@wm.edu</a>.
+      </p>
+    </div>
+  </section>
+);
+
+/* ----------------------------------------------------------------- */
 /* Footer                                                             */
 /* ----------------------------------------------------------------- */
 const Footer: React.FC = () => (
@@ -420,8 +458,11 @@ const App: React.FC = () => {
   useReveal();
   return (
     <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
         <Affiliations />
         <Premise />
@@ -430,6 +471,7 @@ const App: React.FC = () => {
         <Roles />
         <UseCases />
         <Research />
+        <CTA />
       </main>
       <Footer />
     </>

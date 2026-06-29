@@ -64,6 +64,37 @@ a {
   text-decoration: none;
 }
 
+/* ---------- Keyboard focus ---------- */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Pointer users don't get the ring; keyboard users always do. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ---------- Skip to content ---------- */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  transform: translateY(-150%);
+  background: var(--gold);
+  color: #1a130a;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: transform 0.25s var(--ease);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 img {
   max-width: 100%;
   display: block;

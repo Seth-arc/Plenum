@@ -1,6 +1,7 @@
 import React from "react";
 import { ARC } from "../brand";
 import { HeroSphere } from "../components/HeroSphere";
+import { IconArrow } from "../components/icons";
 
 export const Hero: React.FC = () => {
   return (
@@ -42,6 +43,21 @@ export const Hero: React.FC = () => {
               </span>
             </React.Fragment>
           ))}
+        </div>
+
+        <div className="hero-actions hero-anim" style={{ animationDelay: "1.45s" }}>
+          <a className="btn btn-primary" href="#how">
+            Explore the platform
+            <IconArrow />
+          </a>
+          <a
+            className="btn btn-ghost"
+            href="https://github.com/Seth-arc/Plenum"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on GitHub
+          </a>
         </div>
       </div>
 
