@@ -53,7 +53,7 @@ const Premise: React.FC = () => (
           {
             k: "Solution",
             t: "One operating environment",
-            d: "Plenum structures the whole environment — roles, teams, scenario packs, injects, decision submissions, white-cell adjudication, and the record.",
+            d: "Plenum runs the whole environment live in the browser — roles, teams, scenario packs, injects, decision submissions, and white-cell adjudication — all synced to one record.",
           },
           {
             k: "Value",
@@ -155,17 +155,17 @@ const capabilities = [
   {
     icon: <IconUsers />,
     t: "Roles & teams",
-    d: "Blue, Red, and Green delegations with facilitator, scribe, and notetaker seats. Seat contracts keep every chair accounted for.",
+    d: "Blue, Red, Green, and Industry delegations with facilitator, scribe, and notetaker seats. Seat contracts keep every chair accounted for.",
   },
   {
     icon: <IconShield />,
     t: "White-cell control",
-    d: "A dedicated control surface to adjudicate actions, answer RFIs, and steer the game — lead and support operators in sync.",
+    d: "A dedicated control surface to adjudicate actions, answer RFIs, manage per-move time allocations, and extend the board with session-scoped plugins.",
   },
   {
     icon: <IconClock />,
     t: "Phase & inject timing",
-    d: "Move and phase controls with a timer keep the whole room on the same clock. Injects land when the scenario calls for them.",
+    d: "Move and phase controls with per-mark time allocations keep the whole room on one clock. Injects land when the scenario calls for them.",
   },
   {
     icon: <IconBroadcast />,
